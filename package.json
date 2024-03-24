@@ -1,6 +1,6 @@
 {
   "name": "iobroker.han",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Adapter to connect smartmeter via HAN interface to ioBroker",
   "author": {
     "name": "Stefan Köhler",
