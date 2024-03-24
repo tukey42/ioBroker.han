@@ -1,0 +1,242 @@
+{
+    "common": {
+        "name": "han",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "Smartmeter HAN",
+        "titleLang": {
+            "en": "Smartmeter HAN",
+            "de": "Smartmeter HAN",
+            "ru": "Смартметр HAN",
+            "pt": "Medidor inteligente HAN",
+            "nl": "Slimme meter HAN",
+            "fr": "Compteur intelligent HAN",
+            "it": "Misuratore intelligente HAN",
+            "es": "Medidor inteligente HAN",
+            "pl": "Inteligentny licznik HAN",
+            "zh-cn": "智能电表HAN"
+        },
+        "desc": {
+            "en": "Adapter to connect smartmeter via HAN interface to ioBroker",
+            "de": "Adapter zur Anbindung von Smartmetern über die HAN-Schnittstelle an ioBroker",
+            "ru": "Адаптер для подключения смартметра через интерфейс HAN к ioBroker",
+            "pt": "Adaptador para conectar smartmeter via interface HAN ao ioBroker",
+            "nl": "Adapter om smartmeter via HAN-interface te verbinden met ioBroker",
+            "fr": "Adaptateur pour connecter le compteur intelligent via l'interface HAN à ioBroker",
+            "it": "Adattatore per collegare lo smartmeter tramite interfaccia HAN a ioBroker",
+            "es": "Adaptador para conectar smartmeter a través de interfaz HAN a ioBroker",
+            "pl": "Adapter umożliwiający podłączenie smartmetera poprzez interfejs HAN do ioBrokera",
+            "zh-cn": "通过 HAN 接口将智能电表连接到 ioBroker 的适配器"
+        },
+        "authors": [
+            "Stefan Köhler <tukey42@googlemail.com>"
+        ],
+        "keywords": [
+            "ioBroker",
+            "template",
+            "Smart Home",
+            "home automation"
+        ],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "han.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/tukey42/ioBroker.han/main/admin/han.png",
+        "readme": "https://github.com/tukey42/ioBroker.han/blob/main/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "energy",
+        "compact": true,
+        "connectionType": "local",
+        "dataSource": "poll",
+        "adminUI": {
+            "config": "json"
+        },
+        "dependencies": [
+            {
+                "js-controller": ">=3.3.22"
+            }
+        ],
+        "globalDependencies": [
+            {
+                "admin": ">=5.1.13"
+            }
+        ]
+    },
+    "native": {
+        "option1": true,
+        "option2": "42"
+    },
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "Device or service connected",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        },
+        {
+            "_id": "meter",
+            "type": "device",
+            "common": {
+                "name": {
+                    "en": "Smartmeter",
+                    "de": "Intelligenter Stromzähler"
+                },
+                "desc": {
+                    "en": "Smart Meter",
+                    "de": "Intelligenter Stromzähler"
+                  }
+            },
+            "native": {}
+        },  
+        {
+            "_id": "meter.value",
+            "type": "state",
+            "common": {
+                "role": "state",
+                "name": "Used energy",
+                "type": "number",
+                "unit": "kWh",
+                "read": true,
+                "write": false,
+                "def": 0
+            },
+            "native": {}
+        },
+        {
+            "_id": "meter.unit",
+            "type": "state",
+            "common": {
+                "role": "state",
+                "name": "Unit",
+                "type": "string",
+                "read": true,
+                "write": false,
+                "def": "kWh"
+            },
+            "native": {}
+        },
+        {
+            "_id": "meter.timestamp",
+            "type": "state",
+            "common": {
+                "role": "state",
+                "name": "Last Update",
+                "type": "string",
+                "read": true,
+                "write": false,
+                "def": ""
+            },
+            "native": {}
+        },
+        {
+            "_id": "meter.isvalid",
+            "type": "state",
+            "common": {
+                "role": "state",
+                "name": "Is Valid",
+                "type": "string",
+                "read": true,
+                "write": false,
+                "def": "0"
+            },
+            "native": {}
+        },
+        {
+            "_id": "meter.name",
+            "type": "state",
+            "common": {
+                "role": "state",
+                "name": "Name",
+                "type": "string",
+                "read": true,
+                "write": false,
+                "def": ""
+            },
+            "native": {}
+        },
+        {
+            "_id": "meter.obis",
+            "type": "state",
+            "common": {
+                "role": "state",
+                "name": "Obis",
+                "type": "string",
+                "read": true,
+                "write": false,
+                "def": ""
+            },
+            "native": {}
+        },
+        {
+            "_id": "meter.fwversion",
+            "type": "state",
+            "common": {
+                "role": "state",
+                "name": "Firmware Version",
+                "type": "string",
+                "read": true,
+                "write": false,
+                "def": ""
+            },
+            "native": {}
+        },
+        {
+            "_id": "meter.meterid",
+            "type": "state",
+            "common": {
+                "role": "state",
+                "name": "Meter ID",
+                "type": "string",
+                "read": true,
+                "write": false,
+                "def": ""
+            },
+            "native": {}
+        },
+        {
+            "_id": "meter.updateinterval",
+            "type": "state",
+            "common": {
+                "role": "state",
+                "name": "Update Interval",
+                "type": "number",
+                "read": true,
+                "write": false,
+                "def": 900
+            },
+            "native": {}
+        }
+    ]
+}
+

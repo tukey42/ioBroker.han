@@ -1,0 +1,11 @@
+{
+	"value": 15678.1189,
+	"unit": "kWh",
+	"timestamp": "2024-03-24 15:30:00",
+	"isvalid": "1",
+	"name": "Elektro Wirkarbeit Verbrauch Zählerstand",
+	"obis": "1-0:1.8.0",
+	"fwversion": "32474-32475",
+	"meterid": "1itr0310098113.sm",
+	"updateinterval": 900
+}

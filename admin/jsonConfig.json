@@ -1,0 +1,34 @@
+{
+    "i18n": true,
+    "type": "panel",
+    "items": {
+        "ip": {
+            "type": "text",
+            "label": "IP address of smartmeter",
+            "newLine": true
+        },
+        "meterid": {
+            "type": "text",
+            "label": "ID of smartmeter",
+            "newLine": true
+        },
+        "credentials.username": {
+            "type": "text",
+            "label": "Username",
+            "newLine": true
+        },
+        "credentials.password": {
+            "type": "text",
+            "label": "Password",
+            "newLine": true
+        },
+        "updateinterval": {
+            "type": "number",
+            "label": "Update Interval",
+            "newLine": true,
+            "min": 0,
+            "max": 36000,
+            "default": 900
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "cli": true,
+    "target": "directory",
+    "adapterName": "han",
+    "title": "Smartmeter HAN",
+    "description": "Adapter to connect smartmeter via HAN interface to ioBroker",
+    "expert": "yes",
+    "features": [
+        "adapter"
+    ],
+    "adminFeatures": [],
+    "type": "energy",
+    "startMode": "daemon",
+    "connectionType": "local",
+    "dataSource": "poll",
+    "connectionIndicator": "yes",
+    "language": "JavaScript",
+    "nodeVersion": "16",
+    "adminUi": "json",
+    "tools": [
+        "type checking"
+    ],
+    "releaseScript": "yes",
+    "devServer": "yes",
+    "devServerPort": 8081,
+    "indentation": "Space (4)",
+    "quotes": "single",
+    "es6class": "yes",
+    "authorName": "Stefan Köhler",
+    "authorGithub": "tukey42",
+    "authorEmail": "tukey42@googlemail.com",
+    "gitRemoteProtocol": "HTTPS",
+    "gitCommit": "no",
+    "defaultBranch": "main",
+    "license": "MIT License",
+    "dependabot": "no",
+    "creatorVersion": "2.3.0"
+}
