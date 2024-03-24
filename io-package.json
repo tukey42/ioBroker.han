@@ -42,7 +42,7 @@
             "zh-cn": "通过 HAN 接口将智能电表连接到 ioBroker 的适配器"
         },
         "authors": [
-            "Stefan Köhler <tukey42@googlemail.com>"
+            "Stefan Köhler <tukey42@t-online.de>"
         ],
         "keywords": [
             "ioBroker",
