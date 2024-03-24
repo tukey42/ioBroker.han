@@ -16,7 +16,6 @@
                 "zh-cn": "首次出版"
             }
         },
-        "title": "Smartmeter HAN",
         "titleLang": {
             "en": "Smartmeter HAN",
             "de": "Smartmeter HAN",
@@ -124,7 +123,19 @@
             "type": "state",
             "common": {
                 "role": "state",
-                "name": "Used energy",
+                "name": {
+                    "en": "Used energy",
+                    "de": "Gebrauchte Energie",
+                    "ru": "Используемая энергия",
+                    "pt": "Energia utilizada",
+                    "nl": "Gebruikte energie",
+                    "fr": "Énergie usée",
+                    "it": "Energia utilizzata",
+                    "es": "Energía utilizada",
+                    "pl": "Energia zużyta",
+                    "uk": "Використовується енергія",
+                    "zh-cn": "废能源"
+                  },
                 "type": "number",
                 "unit": "kWh",
                 "read": true,
